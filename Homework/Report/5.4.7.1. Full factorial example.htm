@@ -1,0 +1,1113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0064)https://www.itl.nist.gov/div898/handbook/pri/section4/pri471.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<script type="text/javascript" id="www-widgetapi-script" src="./5.4.7.1. Full factorial example_files/www-widgetapi.js.download" async=""></script><script src="./5.4.7.1. Full factorial example_files/iframe_api"></script><script async="" src="./5.4.7.1. Full factorial example_files/analytics.js.download"></script><script async="" type="text/javascript" id="_fed_an_ua_tag" src="./5.4.7.1. Full factorial example_files/Universal-Federated-Analytics-Min.js.download">
+</script>
+<script src="./5.4.7.1. Full factorial example_files/MathJax.js.download" id="">
+</script>
+
+<meta name="GENERATOR" content="Mozilla/4.05 [en] (WinNT; U) [Netscape]">
+<title>5.4.7.1. Full factorial example</title>
+<link rel="stylesheet" href="./5.4.7.1. Full factorial example_files/nist-combined.css">
+<script src="./5.4.7.1. Full factorial example_files/jquery-1.9.0.min.js.download" type="text/javascript" defer="defer"></script>
+<script src="./5.4.7.1. Full factorial example_files/nist-header-footer.js.download" type="text/javascript" defer="defer"></script>
+<style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">.MathJax_Display {text-align: center; margin: 1em 0em; position: relative; display: block!important; text-indent: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; width: 100%}
+.MathJax .merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MathJax .MJX-monospace {font-family: monospace}
+.MathJax .MJX-sans-serif {font-family: sans-serif}
+#MathJax_Tooltip {background-color: InfoBackground; color: InfoText; border: 1px solid black; box-shadow: 2px 2px 5px #AAAAAA; -webkit-box-shadow: 2px 2px 5px #AAAAAA; -moz-box-shadow: 2px 2px 5px #AAAAAA; -khtml-box-shadow: 2px 2px 5px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true'); padding: 3px 4px; z-index: 401; position: absolute; left: 0; top: 0; width: auto; height: auto; display: none}
+.MathJax {display: inline; font-style: normal; font-weight: normal; line-height: normal; font-size: 100%; font-size-adjust: none; text-indent: 0; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0; min-height: 0; border: 0; padding: 0; margin: 0}
+.MathJax:focus, body :focus .MathJax {display: inline-table}
+.MathJax.MathJax_FullWidth {text-align: center; display: table-cell!important; width: 10000em!important}
+.MathJax img, .MathJax nobr, .MathJax a {border: 0; padding: 0; margin: 0; max-width: none; max-height: none; min-width: 0; min-height: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+img.MathJax_strut {border: 0!important; padding: 0!important; margin: 0!important; vertical-align: 0!important}
+.MathJax span {display: inline; position: static; border: 0; padding: 0; margin: 0; vertical-align: 0; line-height: normal; text-decoration: none}
+.MathJax nobr {white-space: nowrap!important}
+.MathJax img {display: inline!important; float: none!important}
+.MathJax * {transition: none; -webkit-transition: none; -moz-transition: none; -ms-transition: none; -o-transition: none}
+.MathJax_Processing {visibility: hidden; position: fixed; width: 0; height: 0; overflow: hidden}
+.MathJax_Processed {display: none!important}
+.MathJax_ExBox {display: block!important; overflow: hidden; width: 1px; height: 60ex; min-height: 0; max-height: none}
+.MathJax .MathJax_EmBox {display: block!important; overflow: hidden; width: 1px; height: 60em; min-height: 0; max-height: none}
+.MathJax_LineBox {display: table!important}
+.MathJax_LineBox span {display: table-cell!important; width: 10000em!important; min-width: 0; max-width: none; padding: 0; border: 0; margin: 0}
+.MathJax .MathJax_HitBox {cursor: text; background: white; opacity: 0; filter: alpha(opacity=0)}
+.MathJax .MathJax_HitBox * {filter: none; opacity: 1; background: transparent}
+#MathJax_Tooltip * {filter: none; opacity: 1; background: transparent}
+@font-face {font-family: MathJax_Main; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Main-Regular.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Main-Regular.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Main-bold; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Main-Bold.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Main-Bold.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Main-italic; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Main-Italic.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Main-Italic.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Math-italic; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Math-Italic.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Math-Italic.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Caligraphic; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Caligraphic-Regular.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Caligraphic-Regular.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Size1; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Size1-Regular.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Size1-Regular.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Size2; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Size2-Regular.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Size2-Regular.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Size3; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Size3-Regular.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Size3-Regular.otf?V=2.7.1') format('opentype')}
+@font-face {font-family: MathJax_Size4; src: url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/woff/MathJax_Size4-Regular.woff?V=2.7.1') format('woff'), url('https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/fonts/HTML-CSS/TeX/otf/MathJax_Size4-Regular.otf?V=2.7.1') format('opentype')}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style></head>
+
+<body bgcolor="FFFFCC" style="zoom: 1;"><div style="visibility: hidden; overflow: hidden; position: absolute; top: 0px; height: 1px; width: auto; padding: 0px; border: 0px; margin: 0px; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal;"><div id="MathJax_Hidden"></div></div><div id="MathJax_Message" style="display: none;"></div><div id="nistheadergoeshere"><header class="nist-header" id="nist-header" role="banner">
+
+  <a target="_parent" href="https://www.nist.gov/" title="National Institute of Standards and Technology" class="nist-header__logo-link" rel="home">
+    <svg aria-hidden="true" class="nist-header__logo-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" width="24" height="32" viewBox="0 0 24 32">
+      <path d="M20.911 5.375l-9.482 9.482 9.482 9.482c0.446 0.446 0.446 1.161 0 1.607l-2.964 2.964c-0.446 0.446-1.161 0.446-1.607 0l-13.25-13.25c-0.446-0.446-0.446-1.161 0-1.607l13.25-13.25c0.446-0.446 1.161-0.446 1.607 0l2.964 2.964c0.446 0.446 0.446 1.161 0 1.607z"></path>
+    </svg>
+    <svg class="nist-header__logo-image" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="-237 385.7 109.7 29.3">
+      <title>National Institute of Standards and Technology</title>
+      <g>
+        <path class="st0" d="M-231,415h-6v-23.1c0,0,0-4.4,4.4-5.8c4-1.3,6.6,1.3,6.6,1.3l19.7,21.3c1,0.6,1.4,0,1.4-0.6v-22h6.1V409
+          c0,1.9-1.6,4.4-4,5.3c-2.4,0.9-4.9,0.9-7.9-1.7l-18.5-20c-0.5-0.5-1.8-0.6-1.8,0.4L-231,415L-231,415z"></path>
+        <path class="st0" d="M-195,386.1h6.1v20.7c0,2.2,1.9,2.2,3.6,2.2h26.8c1.1,0,2.4-1.3,2.4-2.7c0-1.4-1.3-2.8-2.5-2.8H-176
+          c-3,0.1-9.2-2.7-9.2-8.5c0-7.1,5.9-8.8,8.6-9h49.4v6.1h-12.3V415h-6v-22.9h-30.2c-2.9-0.2-4.9,4.7-0.2,5.4h18.6
+          c2.8,0,7.4,2.4,7.5,8.4c0,6.1-3.6,9-7.5,9H-185c-4.5,0-6.2-1.1-7.8-2.5c-1.5-1.5-1.7-2.3-2.2-5.3L-195,386.1
+          C-194.9,386.1-195,386.1-195,386.1z"></path>
+      </g>
+    </svg>
+  </a>
+
+</header>
+</div>
+
+<img src="./5.4.7.1. Full factorial example_files/nvgtbr.gif" border="0" valign="TOP" ismap="" usemap="#MenuBar">
+<map name="MenuBar">
+<area shape="rect" alt="Next Page" href="https://www.itl.nist.gov/div898/handbook/pri/section4/pri472.htm" coords="463,27,504,45">
+<area shape="rect" alt="Previous Page" href="https://www.itl.nist.gov/div898/handbook/pri/section4/pri47.htm" coords="417,28,459,45">
+<area shape="rect" alt="Home" href="https://www.itl.nist.gov/div898/handbook/index.htm" coords="52,0,100,43">
+<area shape="rect" alt="Tools &amp; Aids" href="https://www.itl.nist.gov/div898/handbook/toolaids.htm" coords="165,27,264,46">
+<area shape="rect" alt="Search Handbook" href="https://www.itl.nist.gov/div898/handbook/search.htm" coords="307,28,366,44">
+<area shape="default" nohref="">
+</map>
+<br>
+
+<table cellspacing="20" cellpadding="0" width="540">
+
+<tbody><tr>
+<td valign="TOP" colspan="2">
+<font size="-1">
+<font color="#D60021">5.</font>
+<font color="#00105A"><a href="https://www.itl.nist.gov/div898/handbook/pri/pri.htm">Process Improvement</a></font>
+<br>
+<font color="#D60021">5.4.</font>
+<font color="#00105A"><a href="https://www.itl.nist.gov/div898/handbook/pri/section4/pri4.htm">Analysis of DOE data</a></font>
+<br>
+<font color="#D60021">5.4.7.</font>
+<font color="#00105A"><a href="https://www.itl.nist.gov/div898/handbook/pri/section4/pri47.htm">Examples of DOE's</a></font>
+<br>
+</font>
+<br>
+<table>
+<tbody><tr>
+<td valign="top">
+<h2><font color="#D60021">5.4.7.1.</font></h2>
+</td>
+<td valign="top">
+<h2>Full factorial example</h2>
+</td>
+</tr>
+</tbody></table>
+</td>
+</tr>
+
+
+
+
+
+
+
+
+<!-- begin paragraph -->
+<tr>
+<td width="15%" valign="top">
+<i>
+</i>
+</td>
+<td width="85%" valign="TOP">
+<b>Data Source</b>
+</td>
+</tr>
+<!-- end paragraph -->
+
+<!-- begin paragraph -->
+<tr>
+<td width="15%" valign="top">
+<i>This example uses data from a NIST high performance ceramics
+experiment</i>
+</td>
+<td width="85%" valign="TOP">
+This data set was taken from an experiment that was performed a few
+years ago at NIST by Said Jahanmir of the Ceramics Division in the
+Material Science and Engineering Laboratory.  The original analysis
+was performed primarily by Lisa Gill of the Statistical Engineering
+Division.  The example shown here is an independent analysis of a
+modified portion of the original data set.
+<p>
+The original data set was part of a high performance ceramics experiment
+with the goal of characterizing the effect of grinding parameters on
+sintered reaction-bonded silicon nitride, reaction bonded silicone
+nitride, and sintered silicon nitride.
+</p><p>
+Only modified data from the first of the three ceramic types (sintered
+reaction-bonded silicon nitride) will be discussed in this illustrative
+example of a full factorial data analysis.
+</p><p>
+The reader can download the data as a
+<a href="https://www.itl.nist.gov/div898/handbook/datasets/CERAMIC.DAT">text file</a>.
+</p></td>
+</tr>
+<!-- end paragraph -->
+
+<!-- begin paragraph -->
+<tr>
+<td width="15%" valign="top">
+<i>
+</i>
+</td>
+<td width="85%" valign="TOP">
+<b>Description of Experiment: Response and Factors</b>
+</td>
+</tr>
+<!-- end paragraph -->
+
+<tr>
+<td valign="TOP" width="15%"><!-- Add marginal notes below -->
+<i>Response and factor variables</i>
+</td>
+
+<td valign="TOP" width="85%"><!-- Add main text below -->
+Purpose: To determine the effect of machining factors on ceramic strength
+<br>Response variable = mean (over 15 repetitions) of the ceramic
+    strength
+<br>Number of observations = 32 (a complete 2<sup>5</sup> factorial
+    design)
+<ul>
+   Response Variable Y = Mean (over 15 reps) of Ceramic Strength
+   <br>
+   Factor 1 = Table Speed (2 levels: slow (.025 m/s) and fast (.125 m/s))
+   <br>
+   Factor 2 = Down Feed Rate (2 levels: slow (.05 mm) and fast (.125 mm))
+   <br>
+   Factor 3 = Wheel Grit (2 levels: 140/170 and 80/100)
+   <br>
+   Factor 4 = Direction (2 levels: longitudinal and transverse)
+   <br>
+   Factor 5 = Batch (2 levels: 1 and 2)
+</ul>
+Since two factors were qualitative (direction and batch) and it was
+reasonable to expect monotone effects from the quantitative factors,
+no centerpoint runs were included.
+</td>
+</tr>
+
+<!-- begin paragraph -->
+<tr>
+<td width="15%" valign="top">
+<i>
+The data
+</i>
+</td>
+<td width="85%" valign="TOP">
+The design matrix, with measured ceramic strength responses, appears
+below. The actual randomized run order is given in the last column. (The
+interested reader may download the data as a
+<a href="https://www.itl.nist.gov/div898/handbook/datasets/ceramic.dat">text file</a>.)
+<p>
+</p><pre>    speed rate grit direction batch strength order
+  1    -1   -1   -1        -1    -1   680.45    17
+  2     1   -1   -1        -1    -1   722.48    30
+  3    -1    1   -1        -1    -1   702.14    14
+  4     1    1   -1        -1    -1   666.93     8
+  5    -1   -1    1        -1    -1   703.67    32
+  6     1   -1    1        -1    -1   642.14    20
+  7    -1    1    1        -1    -1   692.98    26
+  8     1    1    1        -1    -1   669.26    24
+  9    -1   -1   -1         1    -1   491.58    10
+ 10     1   -1   -1         1    -1   475.52    16
+ 11    -1    1   -1         1    -1   478.76    27
+ 12     1    1   -1         1    -1   568.23    18
+ 13    -1   -1    1         1    -1   444.72     3
+ 14     1   -1    1         1    -1   410.37    19
+ 15    -1    1    1         1    -1   428.51    31
+ 16     1    1    1         1    -1   491.47    15
+ 17    -1   -1   -1        -1     1   607.34    12
+ 18     1   -1   -1        -1     1   620.80     1
+ 19    -1    1   -1        -1     1   610.55     4
+ 20     1    1   -1        -1     1   638.04    23
+ 21    -1   -1    1        -1     1   585.19     2
+ 22     1   -1    1        -1     1   586.17    28
+ 23    -1    1    1        -1     1   601.67    11
+ 24     1    1    1        -1     1   608.31     9
+ 25    -1   -1   -1         1     1   442.90    25
+ 26     1   -1   -1         1     1   434.41    21
+ 27    -1    1   -1         1     1   417.66     6
+ 28     1    1   -1         1     1   510.84     7
+ 29    -1   -1    1         1     1   392.11     5
+ 30     1   -1    1         1     1   343.22    13
+ 31    -1    1    1         1     1   385.52    22
+ 32     1    1    1         1     1   446.73    29
+</pre>
+</td>
+</tr>
+<!-- end paragraph -->
+
+<!-- begin paragraph -->
+<tr>
+<td width="15%" valign="top">
+<i>
+</i>
+</td>
+<td width="85%" valign="TOP">
+<b>Analysis of the Experiment</b>
+</td>
+</tr>
+<!-- end paragraph -->
+
+<!-- begin paragraph -->
+<tr>
+<td width="15%" valign="top">
+<i>Five basic steps</i>
+</td>
+<td width="85%" valign="TOP">
+The experimental data will be analyzed following the previously
+described <a href="https://www.itl.nist.gov/div898/handbook/pri/section4/pri41.htm#DOE%20Analysis">five basic steps</a>.
+The analyses shown in this page can be generated using 
+<a href="https://www.itl.nist.gov/div898/handbook/pri/section4/pri471.r">R code</a>.
+</td>
+</tr>
+<!-- end paragraph -->
+
+<!-- begin paragraph -->
+<tr>
+<td width="15%" valign="top">
+<i>
+</i>
+</td>
+<td width="85%" valign="TOP">
+<b><u>Step 1: Look at the data</u></b>
+</td>
+</tr>
+<!-- end paragraph -->
+
+<!-- begin paragraph -->
+<tr>
+<td width="15%" valign="top">
+<i>
+Plot the response variable
+</i>
+</td>
+<td width="85%" valign="TOP">
+We start by plotting the response data several ways to see if any trends
+or anomalies appear that would not be accounted for by the standard
+linear response models.
+<p>
+First, we look at the distribution of the response variable regardless
+of factor levels by generating the following four plots.
+</p><ol>
+   <li>The first plot is a
+       <a href="https://www.itl.nist.gov/div898/handbook/eda/section3/normprpl.htm">normal probability
+       plot</a> of the response variable. The red line is the theoretical 
+       normal distribution.
+   </li><li>The second plot is a <a href="https://www.itl.nist.gov/div898/handbook/eda/section3/boxplot.htm">box
+       plot</a> of the response variable. 
+   </li><li>The third plot is a
+       <a href="https://www.itl.nist.gov/div898/handbook/eda/section3/histogra.htm">histogram</a> of the
+       response variable.
+   </li><li>The fourth plot is the response versus the run order.
+</li></ol>
+<p>
+</p><center>
+<img src="./5.4.7.1. Full factorial example_files/pri471_r01.gif" alt="4-plot: normal probability plot, box plot, histogram, run-order plot">
+</center>
+<p>
+Clearly there is "structure" that we hope to account for when we fit
+a response model. For example, the response variable is separated into
+two roughly equal-sized clumps in the histogram.  The first clump is
+centered approximately around the value 450 while the second clump
+is centered approximately around the value 650.  As hoped for, the
+run-order plot does not indicate a significant time effect.
+</p></td>
+</tr>
+<!-- end paragraph -->
+
+
+<!-- begin paragraph -->
+<tr>
+<td width="15%" valign="top">
+<i>
+Box plots of response by factor variables
+</i>
+</td>
+<td width="85%" valign="TOP">
+Next, we look at box plots of the response for each factor.
+<p>
+<img src="./5.4.7.1. Full factorial example_files/pri471_r02.gif" alt="box plots of response for each factor">
+</p><p>
+Several factors, most notably "Direction" followed by "Batch" and
+possibly "Wheel Grit", appear to change the average response level.
+</p></td>
+</tr>
+<!-- end paragraph -->
+
+<!-- begin paragraph -->
+<tr>
+<td width="15%" valign="top">
+<i>
+</i>
+</td>
+<td width="85%" valign="TOP">
+<a name="Step 2: Create the Theoretical"></a><b><u>Step 2: Create the
+theoretical model</u></b>
+</td>
+</tr>
+<!-- end paragraph -->
+
+<!-- begin paragraph -->
+<tr>
+<td width="15%" valign="top">
+<i>
+Theoretical model: assume all four-factor and higher interaction
+terms are not significant
+</i>
+</td>
+<td width="85%" valign="TOP">
+For a 2<sup>5</sup> full factorial experiment we can fit a model
+containing a mean term, five main effect terms, ten two-factor
+interaction terms, ten three-factor interaction terms, five
+four-factor interaction terms, and a five-factor interaction term
+(32 parameters).  However, we start by assuming all four-factor and
+higher interaction terms are non-existent. It's very rare for such
+high-order interactions to be significant, and they are very difficult
+to interpret from an engineering viewpoint.  The assumption allows us to
+accumulate the sums of squares for these terms and use them to estimate
+an error term.  We start with a theoretical model with
+26 unknown constants, hoping the data will clarify which of these are
+the significant main effects and interactions we need for a final model.
+</td>
+</tr>
+<!-- end paragraph -->
+
+<!-- begin paragraph -->
+<tr>
+<td width="15%" valign="top">
+<i>
+</i>
+</td>
+<td width="85%" valign="TOP">
+<b><u>Step 3: Fit model to the data</u></b>
+</td>
+</tr>
+<!-- end paragraph -->
+
+<!-- begin paragraph -->
+<tr>
+<td width="15%" valign="top">
+<i>
+Results from fitting up to and including third-order interaction terms
+</i>
+</td>
+<td width="85%" valign="TOP">
+The ANOVA table for the 26-parameter model (intercept not shown) follows.
+<pre>                    Summary of Fit
+                RSquare         0.995127
+                RSquare Adj     0.974821
+          Root Mean Square Error     17.81632
+           Mean of Response         546.8959
+                   Observations  32
+</pre>
+<pre>                                 <u>Sum</u>
+<u>Source</u>                <u>DF</u>     <u>of Squares</u>  <u>F Ratio</u>     <u>Prob&gt;F</u>
+X1: Table Speed        1       894.33     2.8175     0.1442
+X2: Feed Rate          1      3497.20    11.0175     0.0160
+X1: Table Speed*       1      4872.57    15.3505     0.0078
+    X2: Feed Rate
+X3: Wheel Grit         1     12663.96    39.8964     0.0007
+X1: Table Speed*       1      1838.76     5.7928     0.0528
+    X3: Wheel Grit
+X2: Feed Rate*         1       307.46     0.9686     0.3630
+    X3: Wheel Grit
+X1:Table Speed*        1       357.05     1.1248     0.3297
+   X2: Feed Rate*
+   X3: Wheel Grit
+X4: Direction          1    315132.65   992.7901     &lt;.0001
+X1: Table Speed*       1      1637.21     5.1578     0.0636
+    X4: Direction
+X2: Feed Rate*         1      1972.71     6.2148     0.0470
+    X4: Direction
+X1: Table Speed        1      5895.62    18.5735     0.0050
+    X2: Feed Rate*
+    X4: Direction
+X3: Wheel Grit*        1      3158.34     9.9500     0.0197
+    X4: Direction
+X1: Table Speed*       1         2.12     0.0067     0.9376
+    X3: Wheel Grit*
+    X4: Direction
+X2: Feed Rate*         1        44.49     0.1401     0.7210
+    X3: Wheel Grit*
+    X4: Direction
+X5: Batch              1     33653.91   106.0229     &lt;.0001
+X1: Table Speed*       1       465.05     1.4651     0.2716
+    X5: Batch
+X2: Feed Rate*         1       199.15     0.6274     0.4585
+    X5: Batch
+X1: Table Speed*       1       144.71     0.4559     0.5247
+    X2: Feed Rate*
+    X5: Batch
+X3: Wheel Grit*        1        29.36     0.0925     0.7713
+    X5: Batch
+X1: Table Speed*       1        30.36     0.0957     0.7676
+    X3: Wheel Grit*
+    X5: Batch
+X2: Feed Rate*         1        25.58     0.0806     0.7860
+    X3: Wheel Grit*
+    X5: Batch
+X4: Direction *        1      1328.83     4.1863     0.0867
+    X5: Batch
+X1: Table Speed*       1       544.58     1.7156     0.2382
+    X4: Directio*
+    X5: Batch
+X2: Feed Rate*         1       167.31     0.5271     0.4952
+    X4: Direction*
+    X5: Batch
+X3: Wheel Grit*        1        32.46     0.1023     0.7600
+    X4: Direction*
+    X5: Batch
+</pre>
+</td>
+</tr>
+<!-- end paragraph -->
+
+<!-- begin paragraph -->
+<tr>
+<td width="15%" valign="top">
+<i>
+</i>
+</td>
+<td width="85%" valign="TOP">
+This fit has a large R<sup>2</sup> and adjusted R<sup>2</sup>, but the high
+number of large (&gt;0.10) <i>p</i>-values (in the "Prob&gt;F" column) makes it
+clear that the model has many unnecessary terms.
+</td>
+</tr>
+<!-- end paragraph -->
+
+<!-- begin paragraph -->
+<tr>
+<td width="15%" valign="top">
+<i>
+Stepwise regression
+</i>
+</td>
+<td width="85%" valign="TOP">
+Starting with the 26 terms, we use stepwise regression
+to eliminate unnecessary terms. By a combination of stepwise
+regression and the removal of remaining terms with a <i>p</i>-value
+larger than 0.05, we quickly arrive at a model with an intercept and
+12 significant effect terms.
+</td>
+</tr>
+<!-- end paragraph -->
+
+<!-- begin paragraph -->
+<tr>
+<td width="15%" valign="top">
+<i>
+Results from fitting the 12-term model
+</i>
+</td>
+<td width="85%" valign="TOP">
+<pre>                Summary of Fit
+               RSquare 0.989114
+               RSquare Adj 0.982239
+         Root Mean Square Error 14.96346
+          Mean of Response 546.8959
+         Observations (or Sum Wgts) 32
+</pre>
+<pre>
+                                 <u>Sum</u>
+<u>Source</u>                <u>DF</u>     <u>of Squares</u>  <u>F Ratio</u>     <u>Prob&gt;F</u>
+X1: Table Speed        1       894.33     3.9942     0.0602
+X2: Feed Rate          1      3497.20    15.6191     0.0009
+X1: Table Speed*       1      4872.57    21.7618     0.0002
+    X2: Feed Rate
+X3: Wheel Grit         1     12663.96    56.5595     &lt;.0001
+X1: Table Speed*       1      1838.76     8.2122     0.0099
+    X3: Wheel Grit
+X4: Direction          1    315132.65  1407.4390     &lt;.0001
+X1: Table Speed*       1      1637.21     7.3121     0.0141
+    X4: Direction
+X2: Feed Rate*         1      1972.71     8.8105     0.0079
+    X4: Direction
+X1: Table Speed*       1      5895.62    26.3309     &lt;.0001
+    X2: Feed Rate*
+    X4:Direction
+X3: Wheel Grit*        1      3158.34    14.1057     0.0013
+    X4: Direction
+X5: Batch              1     33653.91   150.3044     &lt;.0001
+X4: Direction*         1      1328.83     5.9348     0.0249
+    X5: Batch
+</pre>
+
+</td>
+</tr>
+<!-- end paragraph -->
+
+<!-- begin paragraph -->
+<tr>
+<td width="15%" valign="top">
+<i>
+Normal plot of the effects
+</i>
+</td>
+<td width="85%" valign="TOP">
+Non-significant effects should effectively follow an approximately
+normal distribution with the same location and scale.  Significant
+effects will vary from this normal distribution.  Therefore, another
+method of determining significant effects is to generate a normal 
+probability plot of all 31 effects.  The effects that deviate
+substantially from the straight line fit to the data are 
+considered significant.  
+Although this is a somewhat subjective criteria, it tends to work
+well in practice.  It is helpful to use both the numerical output
+from the fit and graphical techniques such as the normal probability
+plot in deciding which terms to keep in the model.
+<p>
+A normal probability plot of the effects is shown below.  (To reduce 
+the scale of the y-axis, the largest two effects, X4: Direction 
+and X5: Batch, are not shown on the plot.  In addition, these two 
+effects were not used to compute the normal reference line.)  The 
+effects we consider to be significant are labeled.  In this case, we
+have arrived at the exact same 12 terms by looking at the normal 
+probability plot as we did from the stepwise regression.
+</p><p>
+</p><center>
+<img src="./5.4.7.1. Full factorial example_files/pri471_r03.gif" height="508" width="550" alt="Normal plot of the 31 effects">
+</center>
+<p>
+Most of the effects cluster close to the center (zero) line and
+follow the fitted normal model straight line. The effects that appear to
+be above or below the line by more than a small amount are the same
+effects identified using the stepwise routine, with the exception of
+<i>X</i>1.  Some analysts prefer to include a main effect term
+when it has several significant interactions even if the main
+effect term itself does not appear to be significant.
+</p></td>
+</tr>
+<!-- end paragraph -->
+
+<!-- begin paragraph -->
+<tr>
+<td width="15%" valign="top">
+<i>
+Model appears to account for most of the variability
+</i>
+</td>
+<td width="85%" valign="TOP">
+At this stage, the model appears to account for most of the variability
+in the response, achieving an adjusted R<sup>2</sup> of 0.982. All the
+main effects are significant, as are six 2-factor interactions and
+one 3-factor interaction. The only interaction that makes little
+physical sense is the " <i>X</i>4: Direction*<i>X</i>5: Batch"
+interaction - why would the response using one batch of material
+react differently when the batch is cut in a different direction as
+compared to another batch of the same formulation?
+<p>
+However, before accepting any model, residuals need to be examined.
+</p></td>
+</tr>
+<!-- end paragraph -->
+
+<!-- begin paragraph -->
+<tr>
+<td width="15%" valign="top">
+<i>
+</i>
+</td>
+<td width="85%" valign="TOP">
+<b><u>Step 4: Test the model assumptions using residual graphs (adjust
+and simplify as needed)</u></b>
+</td>
+</tr>
+<!-- end paragraph -->
+
+<!-- begin paragraph -->
+<tr>
+<td width="15%" valign="top">
+<i>
+Plot of residuals versus predicted responses
+</i>
+</td>
+<td width="85%" valign="TOP">
+First we look at the residuals plotted versus the predicted responses.
+<center>
+<img src="./5.4.7.1. Full factorial example_files/pri471_r04.gif" height="408" width="450" alt="Plot of residuals versus predicted response">
+</center>
+<p>
+The residuals appear to spread out more with larger values of predicted
+strength, which should not happen when there is a common variance.
+</p></td>
+</tr>
+<!-- end paragraph -->
+
+<!-- begin paragraph -->
+<tr>
+<td width="15%" valign="top">
+<i>
+
+</i>
+</td>
+<td width="85%" valign="TOP">
+Next we examine the distribution of the residuals with a normal quantile
+plot, a box plot, a histogram, and a run-order plot.
+<p>
+</p><center>
+<img src="./5.4.7.1. Full factorial example_files/pri471_r05.gif" height="508" width="550" alt="Normal probability plot, box plot, and histogram of the residuals">
+</center>
+<p>
+None of these plots appear to show typical normal residuals and 
+the boxplot indicates that there may be outliers.
+</p></td>
+</tr>
+<!-- end paragraph -->
+
+<!-- begin paragraph -->
+<tr>
+<td width="15%" valign="top">
+<i>
+</i>
+</td>
+<td width="85%" valign="TOP">
+<b><u>Step 4 continued: Transform the data and fit the model
+again</u></b>
+</td>
+</tr>
+<!-- end paragraph -->
+
+<!-- begin paragraph -->
+<tr>
+<td width="15%" valign="top">
+<i>
+Box-Cox Transformation
+</i>
+</td>
+<td width="85%" valign="TOP">
+We next look at whether we can model a transformation of the response
+variable and obtain residuals with the assumed properties.  We
+calculate an optimum Box-Cox transformation by finding the value of
+<img align="absmiddle" src="./5.4.7.1. Full factorial example_files/lambda.gif" alt="lambda">
+that maximizes the negative log likelihood.  
+<p>
+</p><center>
+<img src="./5.4.7.1. Full factorial example_files/pri471_r06.gif" height="408" width="450" alt="Box-Cox transformation graph, optimal value at lambda = 0.2">
+</center>
+<p>
+The optimum is found at
+<img align="absmiddle" src="./5.4.7.1. Full factorial example_files/lambda.gif" alt="lambda"> = 0.2.  
+A new Y: Strength variable is calculated using:
+</p><p>
+</p><center>
+<img src="./5.4.7.1. Full factorial example_files/pri471_eq1.gif" alt="Box-Cox transformation">
+</center>
+</td>
+</tr>
+<!-- end paragraph -->
+
+<!-- begin paragraph -->
+<tr>
+<td width="15%" valign="top">
+<i>
+Fit model to transformed data
+</i>
+</td>
+<td width="85%" valign="TOP">
+When the 12-effect model is fit to the transformed data, the
+"X4: Direction * X5: Batch" interaction term is no longer significant.
+The 11-effect model fit is shown below, with parameter estimates and
+<i>p</i>-values.
+
+</td>
+</tr>
+<!-- end paragraph -->
+
+<!-- begin paragraph -->
+<tr>
+<td width="15%" valign="top">
+<i>
+The fitted model after applying Box-Cox transformation
+</i>
+</td>
+<td width="85%" valign="TOP">
+<pre>
+    <b>The 11-Effect Model Fit to Tranformed Response Data</b>
+
+               Response:    Y:NewStrength
+
+                  Summary of Fit
+               RSquare 0.99041
+               RSquare Adj 0.985135
+         Root Mean Square Error 13.81065
+          Mean of Response 1917.115
+         Observations (or Sum Wgts) 32
+</pre>
+<pre>                       <u>Parameter</u>
+<u>Effect</u>                  <u>Estimate</u>         <u>p-value</u>
+Intercept               1917.115          &lt;.0001
+X1: Table Speed            5.777          0.0282
+X2: Feed Rate             11.691          0.0001
+X1: Table Speed*         -14.467          &lt;.0001
+    X2: Feed Rate
+X3: Wheel Grit           -21.649          &lt;.0001
+X1: Table Speed*           7.339          0.007
+    X3: Wheel Grit
+X4: Direction            -99.272          &lt;.0001
+X1: Table Speed*          -7.188          0.0080
+    X4: Direction
+X2: Feed Rate*            -9.160          0.0013
+    X4: Direction
+X1: Table Speed*          15.325          &lt;.0001
+    X2: Feed Rate*
+    X4:Direction
+X3: Wheel Grit*           12.965          &lt;.0001
+    X4: Direction
+X5: Batch                -31.871          &lt;.0001
+</pre>
+
+</td>
+</tr>
+<!-- end paragraph -->
+
+<!-- begin paragraph -->
+<tr>
+<td width="15%" valign="top">
+<i>
+Model has high R<sup>2</sup>
+</i>
+</td>
+<td width="85%" valign="TOP">
+This model has a very large R<sup>2</sup> and adjusted R<sup>2</sup>. The
+residual plots (shown below) are quite a bit better behaved than before
+</td>
+</tr>
+<!-- end paragraph -->
+
+<!-- begin paragraph -->
+<tr>
+<td width="15%" valign="top">
+<i>
+Residual plots from model with transformed response
+</i>
+</td>
+<td width="85%" valign="TOP">
+The plot of the residuals versus the predicted values indicates that the
+transformation has resolved the problem of increasing variace with increasing 
+strength.
+<center>
+<img src="./5.4.7.1. Full factorial example_files/pri471_r07.gif" height="408" width="450" alt="residual vs predicted">
+</center>
+<p>
+The <a href="https://www.itl.nist.gov/div898/handbook/eda/section3/normprpl.htm">normal probability
+plot</a>, <a href="https://www.itl.nist.gov/div898/handbook/eda/section3/boxplot.htm">box plot</a>, and
+the <a href="https://www.itl.nist.gov/div898/handbook/eda/section3/histogra.htm">histogram</a> of the
+residuals do not indicate any serious violations of the model
+assumptions.  The 
+<a href="https://www.itl.nist.gov/div898/handbook/eda/section3/runseqpl.htm">run sequence plot</a>
+of the residuals does not indicate any time dependent patterns.
+</p><center>
+<img src="./5.4.7.1. Full factorial example_files/pri471_r08.gif" height="508" width="550" alt="Normal prob. plot, box plot, histogram, &amp; run-order plot of residuals">
+</center>
+</td>
+</tr>
+<!-- end paragraph -->
+
+<!-- begin paragraph -->
+<tr>
+<td width="15%" valign="top">
+<i>
+</i>
+</td>
+<td width="85%" valign="TOP">
+<b><u>Step 5. Answer the questions in your experimental objectives</u></b>
+</td>
+</tr>
+<!-- end paragraph -->
+
+<!-- begin paragraph -->
+<tr>
+<td width="15%" valign="top">
+<i>
+Important main effects and interaction effects
+</i>
+</td>
+<td width="85%" valign="TOP">
+The magnitudes of the effect estimates show that "Direction" is by far
+the most important factor. "Batch" plays the next most critical role,
+followed by "Wheel Grit". Then, there are several important interactions
+followed by "Feed Rate". "Table Speed" plays a role in almost every
+significant interaction term, but is the least important main effect
+on its own.  Note that large interactions can obscure main effects.
+</td>
+</tr>
+<!-- end paragraph -->
+
+<!-- begin paragraph -->
+<tr>
+<td width="15%" valign="top">
+<i>
+Plots of the main effects and significant 2-way interactions
+</i>
+</td>
+<td width="85%" valign="TOP">
+Plots of the main effects and the significant 2-way interactions are
+shown below.
+<br>
+<p>
+</p><center>
+<img src="./5.4.7.1. Full factorial example_files/pri471_r09.gif" height="440" width="550" alt="Plots of the main effects">
+<p>
+<br>
+<img src="./5.4.7.1. Full factorial example_files/pri471_r10.gif" height="508" width="550" alt="Plots of significant 2-way interactions">
+</p></center>
+<p>
+Next, we plot 2-way interaction plot showing means for all 
+combinations of levels for the two factors.
+</p><center>
+<img src="./5.4.7.1. Full factorial example_files/pri471_r11.gif" height="508" width="550" alt="Plots of significant 2-way interactions">
+</center>
+<p>
+The labels located in the diagonal spaces of the plot grid 
+have two purposes.  First, the label indicates the factor 
+associated with the x-axis for all plots in the same row.
+Second, the label indicates the factor defining the two 
+lines for plots in the same column.  
+</p><p>
+For example, the plot labeled r*s contains averages for 
+low and high levels of the rate variable (x-axis) for 
+both levels of speed.  The blue line represents the low 
+level of speed and the pink line represents the high level 
+of speed.  The two lines in the r*s plot cross, indicating 
+that there is interaction between rate and speed.  Parallel 
+lines indicate that there is no interaction between the two 
+factors.
+</p></td>
+</tr>
+<!-- end paragraph -->
+
+<tr>
+<td align="LEFT" valign="TOP" width="15%">
+<i>
+Optimal Settings
+</i>
+</td>
+<td align="LEFT" valign="TOP" width="85%">
+Based on the analyses, we can select factor settings that 
+maximize ceramic strength.  Translating from "-1" and "+1" back to  
+the actual factor settings, we have: Table speed at "1" or .125m/s; 
+Down Feed Rate at "1" or .125 mm; Wheel Grit at "-1" or 140/170; 
+and Direction at "-1" or longitudinal.
+<p>
+Unfortunately, "Batch" is also a very significant factor, with the first
+batch giving higher strengths than the second. Unless it is possible to
+learn what worked well with this batch, and how to repeat it, not much
+can be done about this factor.
+</p></td>
+</tr>
+
+<!-- begin paragraph -->
+<tr>
+<td width="15%" valign="top">
+<i>
+</i>
+</td>
+<td width="85%" valign="TOP">
+<b>Comments</b>
+</td>
+</tr>
+<!-- end paragraph -->
+
+<!-- begin paragraph -->
+<tr>
+<td width="15%" valign="top">
+<i>
+Analyses with value of Direction fixed indicates complex model is
+needed only for transverse cut
+</i>
+</td>
+<td width="85%" valign="TOP">
+<ol start="1">
+   <li>One might ask what an analysis of just the 2<sup>4</sup> factorial
+       with "Direction" kept at -1 (i.e., longitudinal) would yield. This
+       analysis turns out to have a very simple model; only "Wheel Grit"
+       and "Batch" are significant main effects and no interactions are
+       significant.
+       <p>
+       If, on the other hand, we do an analysis of the 2<sup>4</sup>
+       factorial with "Direction" kept at +1 (i.e., transverse), then we
+       obtain a 7-parameter model with all the main effects and
+       interactions we saw in the 2<sup>5</sup> analysis, except, of
+       course, any terms involving "Direction".
+       </p><p>
+       So it appears that the complex model of the full analysis came
+       from the physical properties of a transverse cut, and these
+       complexities are not present for longitudinal cuts.
+</p></li></ol>
+</td>
+</tr>
+<!-- end paragraph -->
+
+<!-- begin paragraph -->
+<tr>
+<td width="15%" valign="top">
+<i>
+Half fraction design
+</i>
+</td>
+<td width="85%" valign="TOP">
+<ol start="2">
+   <li>If we had assumed that three-factor and higher interactions were
+       negligible before experimenting, a
+       <!-- <img align=absmiddle src="eqns/2resv.gif" alt="2(V)^(5-1)"> -->
+       <span class="MathJax_Preview" style="display: none;"></span><span class="MathJax" id="MathJax-Element-1-Frame" tabindex="0" style=""><nobr><span class="math" id="MathJax-Span-1" style="width: 1.884em; display: inline-block;"><span style="display: inline-block; position: relative; width: 1.823em; height: 0px; font-size: 103%;"><span style="position: absolute; clip: rect(-0.058em, 1001.82em, 1.52em, -999.997em); top: -0.968em; left: 0em;"><span class="mrow" id="MathJax-Span-2"><span class="msubsup" id="MathJax-Span-3"><span style="display: inline-block; position: relative; width: 1.823em; height: 0px;"><span style="position: absolute; clip: rect(3.158em, 1000.43em, 4.19em, -999.997em); top: -4.002em; left: 0em;"><span class="mn" id="MathJax-Span-4" style="font-family: MathJax_Main;">2</span><span style="display: inline-block; width: 0px; height: 4.008em;"></span></span><span style="position: absolute; clip: rect(3.34em, 1001.34em, 4.251em, -999.997em); top: -4.427em; left: 0.488em;"><span class="texatom" id="MathJax-Span-5"><span class="mrow" id="MathJax-Span-6"><span class="mn" id="MathJax-Span-7" style="font-size: 70.7%; font-family: MathJax_Main;">5</span><span class="mo" id="MathJax-Span-8" style="font-size: 70.7%; font-family: MathJax_Main;">−</span><span class="mn" id="MathJax-Span-9" style="font-size: 70.7%; font-family: MathJax_Main;">1</span></span></span><span style="display: inline-block; width: 0px; height: 4.008em;"></span></span><span style="position: absolute; clip: rect(3.34em, 1000.61em, 4.19em, -999.997em); top: -3.698em; left: 0.488em;"><span class="texatom" id="MathJax-Span-10"><span class="mrow" id="MathJax-Span-11"><span class="mi" id="MathJax-Span-12" style="font-size: 70.7%; font-family: MathJax_Math-italic;">V<span style="display: inline-block; overflow: hidden; height: 1px; width: 0.124em;"></span></span></span></span><span style="display: inline-block; width: 0px; height: 4.008em;"></span></span></span></span></span><span style="display: inline-block; width: 0px; height: 0.974em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.434em; border-left: 0px solid; width: 0px; height: 1.378em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-1"> 2_{V}^{5-1} </script> half fraction design might have been chosen. In
+       hindsight, we would have obtained valid estimates for all main
+       effects and two-factor interactions except for <i>X</i><sub>3</sub>
+       and <i>X</i><sub>5</sub>, which would have been aliased with
+       <i>X</i><sub>1</sub>*<i>X</i><sub>2</sub>*<i>X</i><sub>4</sub>
+       in that half fraction.
+</li></ol>
+</td>
+</tr>
+<!-- end paragraph -->
+
+<!-- begin paragraph -->
+<tr>
+<td width="15%" valign="top">
+<i>
+Natural log transformation
+</i>
+</td>
+<td width="85%" valign="TOP">
+<ol start="3">
+   <li>Finally, we note that many analysts might prefer to adopt a
+       natural logarithm transformation (i.e., use ln <i>Y</i>) as the
+       response instead of using a Box-Cox transformation with an
+       exponent of 0.2. The natural logarithm transformation corresponds
+       to an exponent of
+       <!-- <img align=absmiddle src="eqns/lambda.gif" alt="lamda"> -->
+       <span class="MathJax_Preview" style="display: none;"></span><span class="MathJax" id="MathJax-Element-2-Frame" tabindex="0" style=""><nobr><span class="math" id="MathJax-Span-13" style="width: 0.671em; display: inline-block;"><span style="display: inline-block; position: relative; width: 0.61em; height: 0px; font-size: 103%;"><span style="position: absolute; clip: rect(1.095em, 1000.61em, 2.127em, -999.997em); top: -1.939em; left: 0em;"><span class="mrow" id="MathJax-Span-14"><span class="mi" id="MathJax-Span-15" style="font-family: MathJax_Math-italic;">λ</span></span><span style="display: inline-block; width: 0px; height: 1.945em;"></span></span></span><span style="display: inline-block; overflow: hidden; vertical-align: -0.059em; border-left: 0px solid; width: 0px; height: 0.878em;"></span></span></nobr></span><script type="math/tex" id="MathJax-Element-2"> \lambda </script>= 0 in the Box-Cox graph.
+</li></ol>
+</td>
+</tr>
+<!-- end paragraph -->
+
+
+
+
+
+
+
+</tbody></table>
+
+<img src="./5.4.7.1. Full factorial example_files/nvgbrbtm.gif" border="0" usemap="#nvbar.nvbar">
+<map name="nvbar.nvbar">
+<area shape="rect" href="http://www.nist.gov/" coords="22,6,67,20">
+<area shape="rect" href="https://www.itl.nist.gov/div898/handbook" coords="3,23,92,40">
+<area shape="rect" alt="Home" href="https://www.itl.nist.gov/div898/handbook/index.htm" coords="114,12,165,31">
+<area shape="rect" alt="Tools &amp; Aids" href="https://www.itl.nist.gov/div898/handbook/toolaids.htm" coords="190,12,290,31">
+<area shape="rect" alt="Search Handbook" href="https://www.itl.nist.gov/div898/handbook/search.htm" coords="318,14,376,30">
+<area shape="rect" alt="Previous Page" href="https://www.itl.nist.gov/div898/handbook/pri/section4/pri47.htm" coords="428,15,471,29">
+<area shape="rect" alt="Next Page" href="https://www.itl.nist.gov/div898/handbook/pri/section4/pri472.htm" coords="476,15,517,30">
+<area shape="default" nohref="">
+</map>
+
+
+
+<div id="nistfootergoeshere"><footer class="nist-footer">
+  <div class="nist-footer__inner">
+    <div class="nist-footer__menu" role="navigation">
+      <ul>
+        <li class="nist-footer__menu-item">
+          <a target="_parent" href="https://www.nist.gov/privacy-policy">Site Privacy</a>
+        </li>
+        <li class="nist-footer__menu-item">
+          <a target="_parent" href="https://www.nist.gov/oism/accessibility">Accessibility</a>
+        </li>
+        <li class="nist-footer__menu-item">
+          <a target="_parent" href="https://www.nist.gov/privacy">Privacy Program</a>
+        </li>
+        <li class="nist-footer__menu-item">
+          <a target="_parent" href="https://www.nist.gov/oism/copyrights">Copyrights</a>
+        </li>
+        <li class="nist-footer__menu-item">
+          <a target="_parent" href="https://www.commerce.gov/vulnerability-disclosure-policy">Vulnerability Disclosure</a>
+        </li>
+        <li class="nist-footer__menu-item">
+          <a target="_parent" href="https://www.nist.gov/no-fear-act-policy">No Fear Act Policy</a>
+        </li>
+        <li class="nist-footer__menu-item">
+          <a target="_parent" href="https://www.nist.gov/foia">FOIA</a>
+        </li>
+        <li class="nist-footer__menu-item">
+          <a target="_parent" href="https://www.nist.gov/environmental-policy-statement">Environmental Policy</a>
+        </li>
+        <li class="nist-footer__menu-item ">
+          <a target="_parent" href="https://www.nist.gov/summary-report-scientific-integrity">Scientific Integrity</a>
+        </li>
+        <li class="nist-footer__menu-item ">
+          <a target="_parent" href="https://www.nist.gov/nist-information-quality-standards">Information Quality Standards</a>
+        </li>
+        <li class="nist-footer__menu-item">
+          <a target="_parent" href="https://www.commerce.gov/">Commerce.gov</a>
+        </li>
+        <li class="nist-footer__menu-item">
+          <a target="_parent" href="https://www.science.gov/">Science.gov</a>
+        </li>
+        <li class="nist-footer__menu-item">
+          <a target="_parent" href="https://www.usa.gov/">USA.gov</a>
+        </li>
+        <li class="nist-footer__menu-item">
+          <a target="_parent" href="https://vote.gov/">Vote.gov</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="nist-footer__logo">
+    <a target="_parent" href="https://www.nist.gov/" title="National Institute of Standards and Technology" class="nist-footer__logo-link" rel="home">
+      <img src="./5.4.7.1. Full factorial example_files/nist_logo_centered_rev.svg" alt="National Institute of Standards and Technology logo">
+    </a>
+  </div>
+</footer>
+</div><div style="position: absolute; width: 0px; height: 0px; overflow: hidden; padding: 0px; border: 0px; margin: 0px;"><div id="MathJax_Font_Test" style="position: absolute; visibility: hidden; top: 0px; left: 0px; width: auto; padding: 0px; border: 0px; margin: 0px; white-space: nowrap; text-align: left; text-indent: 0px; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; font-size: 40px; font-weight: normal; font-style: normal; font-family: MathJax_Math-italic, sans-serif;"></div></div></body></html>
